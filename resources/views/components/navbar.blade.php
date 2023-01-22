@@ -10,7 +10,7 @@
                 <a class="nav-link" href="{{ route('main') }}">Главная</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('posts') }}">Посты</a>
+                <a class="nav-link" href="{{ route('posts.index') }}">Посты</a>
             </li>
         </ul>
     </div>

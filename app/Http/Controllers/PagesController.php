@@ -15,6 +15,6 @@ class PagesController extends Controller
     public function posts()
     {
         $posts = Post::all();
-        return view('pages.posts', compact('posts'));
+        return view('pages.post.index', compact('posts'));
     }
 }
