@@ -26,4 +26,8 @@
             </li>
         @endforeach
     </ul>
+
+    <div>
+        {{ $posts->withQueryString()->links() }}
+    </div>
 @endsection

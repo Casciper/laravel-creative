@@ -1,10 +1,13 @@
 <?php
 
 use App\Http\Controllers\PagesController;
-use App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', [PagesController::class])->name('main');
+Route::get('/', [PagesController::class, 'main'])->name('main');
+
+Route::group(['namespace' => 'App\Http\Controllers\Admin'], function () {
+    Route::get('/admin', 'IndexController')->name('admin.main');
+});
 
 Route::group(['namespace' => 'App\Http\Controllers\Post'], function () {
     Route::get('/posts', 'IndexController')->name('posts.index');
